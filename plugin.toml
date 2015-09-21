@@ -1,0 +1,6 @@
+[plugin]
+name = "dokku-persistent-storage"
+description = "Basic persistent storage for dokku"
+version = "0.1.0"
+website_url = "https://github.com/expa/dokku-persistent-storage"
+[plugin.config]
