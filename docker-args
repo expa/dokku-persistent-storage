@@ -6,6 +6,18 @@ APP="$1"; PHASE="$2"
 PERSISTENT_FILE="PERSISTENT_STORAGE"
 PERSISTENT_FILE_PATH="$DOKKU_ROOT/$APP/$PERSISTENT_FILE"
 
+case "$0" in
+  *docker-args-build)
+    PHASE=BUILD
+    ;;
+  *docker-args-deploy)
+    PHASE=DEPLOY
+    ;;
+  *docker-args-run)
+    PHASE=RUN
+    ;;
+esac
+
 output=""
 if [[ -f "$PERSISTENT_FILE_PATH" ]] && [[ "$PHASE" != "build" ]]; then
   DONE=false

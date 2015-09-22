@@ -21,8 +21,11 @@ Installation
 ------------
 
 ```bash
-$ cd /var/lib/dokku/plugins
-$ sudo git clone https://github.com/dyson/dokku-persistent-storage.git persistent-storage
+# dokku 0.3.x
+$ sudo git clone https://github.com/dyson/dokku-persistent-storage.git /var/lib/dokku/plugins/persistent-storage
+
+# dokku 0.4+
+$ dokku plugin:install https://github.com/cedricziel/dokku-deployment-keys.git
 ````
 
 Usage
